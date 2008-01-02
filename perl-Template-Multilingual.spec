@@ -14,6 +14,7 @@ Url:		http://search.cpan.org/dist/%{module}/
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(Template)
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 This subclass of Template Toolkit's Template class supports multilingual
