@@ -1,44 +1,36 @@
 %define module  Template-Multilingual
-%define name	perl-%{module}
-%define version 1.00
-%define release %mkrel 2
+%define upstream_version 1.00
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		perl-%{module}
+Version:	%perl_convert_version %{upstream_version}
+Release:	3
 Summary:	Multilingual templates for Template Toolkit
 License:	GPL or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Template/%{module}-%{version}.tar.bz2
+Source:		ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Template/Template-Multilingual-%{upstream_version}.tar.gz
 Url:		http://search.cpan.org/dist/%{module}/
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(Template)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 This subclass of Template Toolkit's Template class supports multilingual
 templates: templates that contain text in several languages.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{module}-%{upstream_version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
 ./Build
 
 %install
-rm -rf %{buildroot}
 ./Build install destdir=%{buildroot}
 
 %check
 ./Build test
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc Changes README
 %{perl_vendorlib}/Template/Multilingual.pm
 %{perl_vendorlib}/Template/Multilingual
@@ -75,4 +67,5 @@ rm -rf %{buildroot}
 
 * Wed May 17 2006 Rafael Garcia-Suarez <rgarciasuarez@mandriva.com> 0.06-1mdk
 - First Mandriva release
+
 
