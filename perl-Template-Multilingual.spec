@@ -3,7 +3,7 @@
 
 Name:		perl-%{module}
 Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Release:	1
 Summary:	Multilingual templates for Template Toolkit
 License:	GPL or Artistic
 Group:		Development/Perl
@@ -35,3 +35,4 @@ templates: templates that contain text in several languages.
 %{perl_vendorlib}/Template/Multilingual.pm
 %{perl_vendorlib}/Template/Multilingual
 %{_mandir}/*/*
+
