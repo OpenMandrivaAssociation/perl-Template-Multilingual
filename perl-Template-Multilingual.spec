@@ -8,7 +8,7 @@ Summary:	Multilingual templates for Template Toolkit
 License:	GPL or Artistic
 Group:		Development/Perl
 Source:		ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Template/Template-Multilingual-%{upstream_version}.tar.gz
-Url:		http://search.cpan.org/dist/%{module}/
+Url:		https://search.cpan.org/dist/%{module}/
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(Template)
 BuildArch:	noarch
