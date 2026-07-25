@@ -2,13 +2,13 @@
 %define upstream_version 1.00
 
 Name:		perl-%{module}
-Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Version:	%{upstream_version}
+Release:	7
 Summary:	Multilingual templates for Template Toolkit
 License:	GPL or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Template/Template-Multilingual-%{upstream_version}.tar.gz
-Url:		https://search.cpan.org/dist/%{module}/
+Source:		https://cpan.metacpan.org/authors/id/C/CH/CHOLET/Template-Multilingual-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Template-Multilingual
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(Template)
 BuildArch:	noarch
